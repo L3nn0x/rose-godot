@@ -39,7 +39,7 @@ bones/4/name = "b1_head"
 bones/4/parent = 3
 bones/4/rest = Transform( 0.99871, -2.0422e-07, -0.0507737, 2.04371e-07, 1, -2.20344e-09, 0.0507737, -8.17609e-09, 0.99871, 0.0496721, 1.16014e-09, -2.32174e-09 )
 bones/4/enabled = true
-bones/4/bound_children = [ NodePath("Head") ]
+bones/4/bound_children = [  ]
 bones/5/name = "b1_lclavicle"
 bones/5/parent = 3
 bones/5/rest = Transform( -0.108235, 0.976598, -0.185853, 0.985284, 0.0805029, -0.150782, -0.132292, -0.199437, -0.97094, -0.0358277, 0.0418633, 0.0245104 )
@@ -138,7 +138,7 @@ mesh = ExtResource( 5 )
 material/0 = null
 
 [node name="Head" type="BoneAttachment" parent="Skeleton"]
-transform = Transform( -0.0306375, 0.998584, -0.0434956, 0.955261, 0.0164454, -0.29531, -0.294176, -0.050597, -0.954412, -0.0161611, 1.29106, -0.331655 )
+transform = Transform( 2.17941e-07, 1, -1.41057e-06, 0.994725, -3.01881e-07, -0.102583, -0.102583, -1.38077e-06, -0.994725, -3.4057e-08, 1.35979, -0.00806646 )
 bone_name = "b1_head"
 
 [node name="Face" type="MeshInstance" parent="Skeleton/Head"]
@@ -152,6 +152,3 @@ material/0 = null
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Empty Idle" = ExtResource( 8 )
 "anims/Empty Run" = ExtResource( 9 )
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, -4 )

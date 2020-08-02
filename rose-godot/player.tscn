@@ -15,10 +15,10 @@ script = ExtResource( 1 )
 state = 1
 
 [node name="Skeleton" parent="Character" index="0"]
-bones/4/bound_children = [ NodePath("Head") ]
+bones/4/bound_children = [  ]
 
 [node name="Head" parent="Character/Skeleton" index="4"]
-transform = Transform( 2.17941e-07, 1, -1.41057e-06, 0.994725, -3.01881e-07, -0.102583, -0.102583, -1.38077e-06, -0.994725, -3.4057e-08, 1.35979, -0.00806646 )
+transform = Transform( 0.0169583, 0.996998, 0.0755502, 0.997399, -0.0221627, 0.0685888, 0.0700573, 0.0741906, -0.994781, 0.00902568, 1.36337, -0.0130751 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2 )

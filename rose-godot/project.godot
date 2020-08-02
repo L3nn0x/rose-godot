@@ -19,6 +19,10 @@ config/name="RoseSharp"
 run/main_scene="res://scenes/LoginUi.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+NetworkManager="*res://scripts/NetworkManager.cs"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "rose_importer" )

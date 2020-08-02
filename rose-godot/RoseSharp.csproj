@@ -83,6 +83,7 @@
     <Compile Include="addons\rose_importer\Importers\ZmdImporter.cs" />
     <Compile Include="addons\rose_importer\Importers\ZmoImporter.cs" />
     <Compile Include="addons\rose_importer\Importers\ZmsImporter.cs" />
+    <Compile Include="addons\rose_importer\Importers\ZonImporter.cs" />
 
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

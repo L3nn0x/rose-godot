@@ -10,7 +10,9 @@ var _move = false
 var _move_to = false
 var _move_from = false
 
-func _process(delta):
+var indicator = preload("res://misc/indicator.tscn")
+
+func _process(_delta):
     var cur_anim = $Character/AnimationPlayer.current_animation;
     if(self._move):
         self.move()
@@ -21,7 +23,7 @@ func _process(delta):
             $Character/AnimationPlayer.play("Empty Idle")
         
 
-func _physics_process(delta):
+func _physics_process(_delta):
     if self._check_click:
         var from = $Camera.project_ray_origin(self._click_pos)
         var to = from + $Camera.project_ray_normal(self._click_pos) * CLICK_DISTANCE
@@ -34,6 +36,10 @@ func _physics_process(delta):
                 self._move_to = result.position
                 self._move_from = self.global_transform.origin
                 self.look_at(Vector3(self._move_to.x, self.global_transform.origin.y, self._move_to.z), Vector3(0, 1, 0))
+                var node = indicator.instance()
+                result.position.y = 1
+                node.transform.origin = result.position
+                get_parent().add_child(node)
             
         self._check_click = false
         self._click_pos = null
