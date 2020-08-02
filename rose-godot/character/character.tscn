@@ -12,11 +12,9 @@
 
 [node name="Character" type="Spatial"]
 script = ExtResource( 1 )
-_sections_unfolded = [ "script" ]
-gender = 0
-state = 0
+state = 4
 
-[node name="Skeleton" type="Skeleton" parent="." index="0"]
+[node name="Skeleton" type="Skeleton" parent="."]
 bones/0/name = "b1_pelvis"
 bones/0/parent = -1
 bones/0/rest = Transform( -1.3113e-06, 1, 2.75771e-06, 1, 1.37091e-06, -1.13687e-13, -3.75167e-12, 2.75771e-06, -1, 0, 0.73008, 2.21608e-10 )
@@ -41,7 +39,7 @@ bones/4/name = "b1_head"
 bones/4/parent = 3
 bones/4/rest = Transform( 0.99871, -2.0422e-07, -0.0507737, 2.04371e-07, 1, -2.20344e-09, 0.0507737, -8.17609e-09, 0.99871, 0.0496721, 1.16014e-09, -2.32174e-09 )
 bones/4/enabled = true
-bones/4/bound_children = [  ]
+bones/4/bound_children = [ NodePath("Head") ]
 bones/5/name = "b1_lclavicle"
 bones/5/parent = 3
 bones/5/rest = Transform( -0.108235, 0.976598, -0.185853, 0.985284, 0.0805029, -0.150782, -0.132292, -0.199437, -0.97094, -0.0358277, 0.0418633, 0.0245104 )
@@ -123,102 +121,37 @@ bones/20/rest = Transform( 3.57628e-07, -8.42196e-08, -1, 4.46682e-09, 1, -8.421
 bones/20/enabled = true
 bones/20/bound_children = [  ]
 
-[node name="Body" type="MeshInstance" parent="Skeleton" index="0"]
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
+[node name="Body" type="MeshInstance" parent="Skeleton"]
 mesh = ExtResource( 2 )
-skeleton = NodePath("..")
 material/0 = null
 
-[node name="Legs" type="MeshInstance" parent="Skeleton" index="1"]
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
+[node name="Legs" type="MeshInstance" parent="Skeleton"]
 mesh = ExtResource( 3 )
-skeleton = NodePath("..")
 material/0 = null
 
-[node name="Hands" type="MeshInstance" parent="Skeleton" index="2"]
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
+[node name="Hands" type="MeshInstance" parent="Skeleton"]
 mesh = ExtResource( 4 )
-skeleton = NodePath("..")
 material/0 = null
 
-[node name="Feet" type="MeshInstance" parent="Skeleton" index="3"]
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
+[node name="Feet" type="MeshInstance" parent="Skeleton"]
 mesh = ExtResource( 5 )
-skeleton = NodePath("..")
 material/0 = null
 
-[node name="Head" type="BoneAttachment" parent="Skeleton" index="4"]
-transform = Transform( 2.17941e-07, 1, -1.41057e-06, 0.994725, -3.01881e-07, -0.102583, -0.102583, -1.38077e-06, -0.994725, -3.4057e-08, 1.35979, -0.00806646 )
+[node name="Head" type="BoneAttachment" parent="Skeleton"]
+transform = Transform( -0.0306375, 0.998584, -0.0434956, 0.955261, 0.0164454, -0.29531, -0.294176, -0.050597, -0.954412, -0.0161611, 1.29106, -0.331655 )
 bone_name = "b1_head"
-_sections_unfolded = [ "Transform" ]
 
-[node name="Face" type="MeshInstance" parent="Skeleton/Head" index="0"]
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
+[node name="Face" type="MeshInstance" parent="Skeleton/Head"]
 mesh = ExtResource( 6 )
-skeleton = NodePath("..")
 material/0 = null
 
-[node name="Hair" type="MeshInstance" parent="Skeleton/Head" index="1"]
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
+[node name="Hair" type="MeshInstance" parent="Skeleton/Head"]
 mesh = ExtResource( 7 )
-skeleton = NodePath("..")
 material/0 = null
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Empty Idle" = ExtResource( 8 )
 "anims/Empty Run" = ExtResource( 9 )
-blend_times = [  ]
 
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, -4 )

@@ -46,6 +46,10 @@
       <Version>1.0.0</Version>
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
+    <Reference Include="Revise">
+      <Private>False</Private>
+      <HintPath>$(ProjectDir)/Revise.dll</HintPath>
+    </Reference>
     <Reference Include="FlatBuffers">
       <Private>False</Private>
       <HintPath>$(ProjectDir)/FlatBuffers.dll</HintPath>
@@ -59,6 +63,7 @@
       <HintPath>$(ProjectDir)/.mono/assemblies/$(ApiConfiguration)/GodotSharpEditor.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Rose\Network\Packets\CharacterCreateRequest.cs" />
@@ -69,10 +74,16 @@
     <Compile Include="Rose\Network\Packets\PacketType.cs" />
     <Compile Include="Rose\Network\Packets\Stats.cs" />
     <Compile Include="Rose\Network\Packets\UpdateStats.cs" />
-    <Compile Include="addons\rose_importer\rose_importer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="scripts\LoginUi.cs" />
     <Compile Include="scripts\NetworkManager.cs" />
+
+    <Compile Include="addons\rose_importer\rose_importer.cs" />
+    <Compile Include="addons\rose_importer\Utils.cs" />
+    <Compile Include="addons\rose_importer\Importers\ZmdImporter.cs" />
+    <Compile Include="addons\rose_importer\Importers\ZmoImporter.cs" />
+    <Compile Include="addons\rose_importer\Importers\ZmsImporter.cs" />
+
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

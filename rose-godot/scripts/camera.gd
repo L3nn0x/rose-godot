@@ -12,7 +12,7 @@ var yaw = 0.0
 func _ready():
     pass
 
-func _process(delta):
+func _process(_delta):
     var target = get_node(look_at)
     
     pitch = clamp(pitch, -PI/2 + 0.01, PI/2 - 0.01)
