@@ -1,0 +1,12 @@
+namespace Rose.Network.Packets;
+
+enum LoginReplyValue : byte {
+    OK,
+    NOT_OK
+}
+
+table LoginReply {
+    reply: LoginReplyValue;
+}
+
+root_type LoginReply;

@@ -1,0 +1,6 @@
+C:\Users\VaillantAdrien\Documents\cpp\RoseSharp\.mono\temp\bin\Debug\RoseSharp.dll
+C:\Users\VaillantAdrien\Documents\cpp\RoseSharp\.mono\temp\bin\Debug\RoseSharp.pdb
+C:\Users\VaillantAdrien\Documents\cpp\RoseSharp\.mono\temp\obj\Debug\RoseSharp.csprojAssemblyReference.cache
+C:\Users\VaillantAdrien\Documents\cpp\RoseSharp\.mono\temp\obj\Debug\RoseSharp.csproj.CoreCompileInputs.cache
+C:\Users\VaillantAdrien\Documents\cpp\RoseSharp\.mono\temp\obj\Debug\RoseSharp.dll
+C:\Users\VaillantAdrien\Documents\cpp\RoseSharp\.mono\temp\obj\Debug\RoseSharp.pdb

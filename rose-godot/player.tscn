@@ -5,63 +5,32 @@
 [ext_resource path="res://scripts/camera.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
-
 radius = 0.4
 height = 1.2
 
 [node name="Player" type="KinematicBody"]
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 1
-axis_lock_linear_x = false
-axis_lock_linear_y = false
-axis_lock_linear_z = false
-axis_lock_angular_x = false
-axis_lock_angular_y = false
-axis_lock_angular_z = false
-collision/safe_margin = 0.001
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="Character" parent="." index="0" instance=ExtResource( 2 )]
-editor/display_folded = true
+[node name="Character" parent="." instance=ExtResource( 2 )]
 state = 1
 
+[node name="Skeleton" parent="Character" index="0"]
+bones/4/bound_children = [ NodePath("Head") ]
+
 [node name="Head" parent="Character/Skeleton" index="4"]
-transform = Transform( 0.0166092, 0.996632, 0.0803007, 0.997726, -0.0217681, 0.0638029, 0.065336, 0.0790584, -0.994727, 0.00515028, 1.36323, -0.0132905 )
+transform = Transform( 2.17941e-07, 1, -1.41057e-06, 0.994725, -3.01881e-07, -0.102583, -0.102583, -1.38077e-06, -0.994725, -3.4057e-08, 1.35979, -0.00806646 )
 
-[node name="Camera" type="Camera" parent="." index="1"]
+[node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2 )
-keep_aspect = 1
-cull_mask = 1048575
-environment = null
-h_offset = 0.0
-v_offset = 0.0
-doppler_tracking = 0
-projection = 0
 current = true
-fov = 70.0
-size = 1.0
-near = 0.05
-far = 100.0
 script = ExtResource( 3 )
-_sections_unfolded = [ "Transform", "script" ]
 look_at = NodePath("../Character/Skeleton/Head")
-distance = 2.5
 
-[node name="CollisionShape" type="CollisionShape" parent="." index="2"]
+[node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.95, 0 )
 shape = SubResource( 1 )
-disabled = false
-_sections_unfolded = [ "Transform", "shape" ]
 
-[node name="FloorCast" type="RayCast" parent="." index="3"]
+[node name="FloorCast" type="RayCast" parent="."]
 enabled = true
-exclude_parent = true
-cast_to = Vector3( 0, -1, 0 )
-collision_mask = 1
-_sections_unfolded = [ "Transform" ]
-
 
 [editable path="Character"]

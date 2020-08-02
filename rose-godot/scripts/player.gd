@@ -1,4 +1,4 @@
-extends Spatial
+extends KinematicBody
 
 const CLICK_DISTANCE = 1000
 
